@@ -1,0 +1,39 @@
+/** Tyler Youk PreLab12 */
+
+//package sample; 
+import javafx.application.Application; 
+import javafx.scene.Scene; 
+import javafx.scene.layout.BorderPane; 
+import javafx.stage.Stage; 
+import java.io.IOException;
+import javafx.scene.control.TextArea;
+
+public class PreLab12 extends Application {
+
+  public static void main(String[] args){
+    Application.launch(args); 
+  }
+  
+  @Override
+  public void start(Stage stage) throws IOException {
+    String s = "I yelled at the Lorax, \"Now listen here, Dad!\n" + 
+      "All you do is yap-yap and say, `Bad! Bad! Bad! Bad!'\n " + 
+      "... \n" + "And, for your information, you Lorax, I'm figuring\n" + 
+      "on biggering \n" + " and Biggering \n" + " and BIGGERING \n" + 
+      " and BIGGERING, \n" + "turning MORE Truffala Trees into Theeds \n" + 
+      "which everyone, Everyone, EVERYONE needs!\"";
+    
+    //creating the textarea
+    TextArea twelveTextArea = new TextArea();
+    twelveTextArea.setText(s);
+    BorderPane root = new BorderPane();
+    root.setCenter(twelveTextArea);
+    
+    //creating the scene
+  Scene twelveScene = new Scene(root, 500, 200); //scene with BorderPane root, width 500, height 200
+  stage.setScene(twelveScene);
+  stage.setTitle("The Lorax");
+  stage.show();
+  }
+
+}

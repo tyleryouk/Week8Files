@@ -1,0 +1,11 @@
+
+
+public class ChutesAndLadders {
+  private int[] board;
+  private int[] players;
+  
+  public ChutesAndLadders(int numPlayers){
+    board = new int[101];
+    players = new int[numPlayers];
+  }
+}
